@@ -1,0 +1,11 @@
+\#recentf\#
+%backup%~
+auto-save-list/
+elpa/
+eshell/
+recentf
+session.*
+smex-items
+tramp
+tutorial/
+url/
