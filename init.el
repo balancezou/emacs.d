@@ -3,7 +3,7 @@
 ;;- ------------------------------
 ;; load site-lisp default path
 (add-to-list 'load-path "~/.emacs.d/lisp")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/packages")
+(add-to-list 'load-path "~/.emacs.d/site-lisp")
 
 (require 'init-benchmarking) ;; Measure startup time
 (require 'init-local)
@@ -55,21 +55,21 @@
 (window-number-meta-mode 1)  
 
 ;; magit
-(add-to-list 'load-path "~/.emacs.d/site-lisp/dash")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/with-editor")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/magit/lisp")
-(require 'magit)
-;; magit document
-(with-eval-after-load 'info
-  (info-initialize)
-  (add-to-list 'Info-directory-list
-	       "~/.emacs.d/site-lisp/magit/Documentation/"))
-(put 'upcase-region 'disabled nil)
+;; (add-to-list 'load-path "~/.emacs.d/site-lisp/dash")
+;; (add-to-list 'load-path "~/.emacs.d/site-lisp/with-editor")
+;; (add-to-list 'load-path "~/.emacs.d/site-lisp/magit/lisp")
+;; (require 'magit)
+;; ;; magit document
+;; (with-eval-after-load 'info
+;;   (info-initialize)
+;;   (add-to-list 'Info-directory-list
+;; 	       "~/.emacs.d/site-lisp/magit/Documentation/"))
+;; (put 'upcase-region 'disabled nil)
 
 ;; neotree
-(add-to-list 'load-path "~/.emacs.d/site-lisp/neotree")
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
+;; (add-to-list 'load-path "~/.emacs.d/site-lisp/neotree")
+;; (require 'neotree)
+;; (global-set-key [f8] 'neotree-toggle)
 
 
 (provide 'init)
