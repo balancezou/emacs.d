@@ -15,6 +15,9 @@
 ;; englisg font
 (set-frame-font "monospace 10")
 
+;; full screen
+(toggle-frame-fullscreen)
+
 ;; display line number & column number
 (setq column-number-mode t)
 (setq line-number-mode t)
