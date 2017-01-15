@@ -66,9 +66,9 @@
 ;; (put 'upcase-region 'disabled nil)
 
 ;; neotree
-;; (add-to-list 'load-path "~/.emacs.d/site-lisp/neotree")
-;; (require 'neotree)
-;; (global-set-key [f8] 'neotree-toggle)
+(add-to-list 'load-path "~/.emacs.d/site-lisp/neotree")
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
 
 ;; glsl mode
 (autoload 'glsl-mode "glsl-mode" nil t)
@@ -77,6 +77,8 @@
 (add-to-list 'auto-mode-alist '("\\.frag\\'" . glsl-mode))
 (add-to-list 'auto-mode-alist '("\\.geom\\'" . glsl-mode))
 (add-to-list 'auto-mode-alist '("\\.pfx\\'" . glsl-mode))
+(add-to-list 'auto-mode-alist '("\\.vsh\\'" . glsl-mode))
+(add-to-list 'auto-mode-alist '("\\.fsh\\'" . glsl-mode))
 
 
 (provide 'init)
