@@ -7,6 +7,7 @@
 
 (require 'init-benchmarking) ;; Measure startup time
 (require 'init-local)
+(require 'init-local-hs)
 
 ;; Color Theme
 (add-to-list 'load-path "~/.emacs.d/site-lisp/color-theme-6.6.0")
@@ -31,9 +32,7 @@
 (add-hook 'c-mode-common-hook
 	  (lambda ()
 	    (require 'gtags)
-	    (gtags-mode t)
-	    (when (not (string-match "/usr/src/linux/" (expand-file-name default-directory)))  
-	      (djcb-gtags-create-or-update))))
+	    (gtags-mode t)))
 
 ;; eim
 (add-to-list 'load-path "~/.emacs.d/site-lisp/eim")
@@ -70,6 +69,14 @@
 ;; (add-to-list 'load-path "~/.emacs.d/site-lisp/neotree")
 ;; (require 'neotree)
 ;; (global-set-key [f8] 'neotree-toggle)
+
+;; glsl mode
+(autoload 'glsl-mode "glsl-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.glsl\\'" . glsl-mode))
+(add-to-list 'auto-mode-alist '("\\.vert\\'" . glsl-mode))
+(add-to-list 'auto-mode-alist '("\\.frag\\'" . glsl-mode))
+(add-to-list 'auto-mode-alist '("\\.geom\\'" . glsl-mode))
+(add-to-list 'auto-mode-alist '("\\.pfx\\'" . glsl-mode))
 
 
 (provide 'init)

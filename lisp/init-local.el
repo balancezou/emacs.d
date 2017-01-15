@@ -83,18 +83,6 @@
 ;; display function name
 (which-function-mode t)
 
-;; fold/toggle
-(load-library "hideshow")
-(add-hook 'c-mode-common-hook 'hs-minor-mode)
-(add-hook 'objc-mode-hook 'hs-minor-mode)
-(add-hook 'java-mode-hook 'hs-minor-mode)
-(add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
-(add-hook 'lisp-mode-hook 'hs-minor-mode)
-(add-hook 'scheme-mode-hook 'hs-minor-mode)
-(global-set-key (kbd "C-,") 'hs-toggle-hiding)   
-(global-set-key (kbd "C-.") 'hs-show-all)        
-(global-set-key (kbd "C-/") 'hs-hide-all)        
-
 ;; display weekly calender
 (copy-face font-lock-constant-face 'calendar-iso-week-face)
 (set-face-attribute 'calendar-iso-week-face nil

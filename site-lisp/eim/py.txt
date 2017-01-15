@@ -3898,7 +3898,7 @@ ca-xi 擦洗
 ca-xie 擦写
 ca-yin 擦音
 ca-zao 擦澡
-cai 才 裁 菜 采 财 彩 材 踩 猜 蔡 跴 寀 睬 埰
+cai 采 才 裁 菜 财 彩 材 踩 猜 蔡 跴 寀 睬 埰
 cai-ban 采办
 cai-bang 彩蚌
 cai-bao 财宝
@@ -14010,7 +14010,7 @@ kao-wen 拷问
 kao-xiang 烤箱
 kao-ya 烤鸭
 kao-yan 考验
-ke 可 客 科 刻 克 课 壳 颗 棵 坷 渴 咳 磕 柯 髁 窠 颏 薖 蝌 锞 稞 瞌 钶 氪 轲 缂 溘 苛 珂 骒 恪 榼 搕 岢 嗑 簻 趷 呵 疴 蚵
+ke 克 可 客 科 刻 课 壳 颗 棵 坷 渴 咳 磕 柯 髁 窠 颏 薖 蝌 锞 稞 瞌 钶 氪 轲 缂 溘 苛 珂 骒 恪 榼 搕 岢 嗑 簻 趷 呵 疴 蚵
 ke-ai 可哀 可爱
 ke-bei 可悲
 ke-ben 课本
@@ -15642,7 +15642,7 @@ lou-xia 楼下
 lou-xiang 楼厢
 lou-you 漏油
 lou-yu-zi-dong-hua 楼宇自动化
-lu 路 录 鲁 卢 露 鹿 陆 芦 炉 戮 禄 掳 噜 蓼 鯥 舻 鲈 簏 騄 鸬 蕗 鹭 胪 菉 艣 栌 辘 潞 赂 碌 麓 虏 卤 辂 庐 颅 璐 轳 纑 逯 橹 渌 罏 鑪 漉 泸 籚 籙 醁 簬 穋 垆 磠 磟 稑 彔 盝 甪 琭 玈 僇 撸 镥 氇
+lu 鲁 路 录 卢 露 鹿 陆 芦 炉 戮 禄 掳 噜 蓼 鯥 舻 鲈 簏 騄 鸬 蕗 鹭 胪 菉 艣 栌 辘 潞 赂 碌 麓 虏 卤 辂 庐 颅 璐 轳 纑 逯 橹 渌 罏 鑪 漉 泸 籚 籙 醁 簬 穋 垆 磠 磟 稑 彔 盝 甪 琭 玈 僇 撸 镥 氇
 lu-an 六安
 lu-an-di-qu 六安地区
 lu-bian 炉边 路边
@@ -16755,7 +16755,7 @@ min-zhu-zhu-yi-zhe 民主主义者
 min-zu 民族
 min-zu-zhu-yi 民族主义
 min-zu-zhu-yi-qing-xu 民族主义情绪
-ming 名 明 命 鸣 铭 冥 瞑 蓂 螟 洺 暝 榠 溟 鄍 茗 酩
+ming 鸣 名 明 命 铭 冥 瞑 蓂 螟 洺 暝 榠 溟 鄍 茗 酩
 ming-bai 明白
 ming-bao 明报
 ming-chan 名产
@@ -19125,7 +19125,7 @@ qiu-zhi 求职
 qiu-zhu 求助
 qiu-zhuang 球状
 qiu-zhuang-wu 球状物
-qu 取 区 去 曲 趣 屈 躯 娶 瞿 渠 麮 詘 袪 鸲 蛐 龋 驱 蛆 趋 阹 磲 氍 祛 胠 胊 觑 朐 璩 阒 籧 敺 岖 衢 蘧 蕖 凵 劬 軥 砠 豦 岨 呿 佢 佉 戌 癯 麴 诎 蠼 苣 黢
+qu 曲 取 区 去 趣 屈 躯 娶 瞿 渠 麮 詘 袪 鸲 蛐 龋 驱 蛆 趋 阹 磲 氍 祛 胠 胊 觑 朐 璩 阒 籧 敺 岖 衢 蘧 蕖 凵 劬 軥 砠 豦 岨 呿 佢 佉 戌 癯 麴 诎 蠼 苣 黢
 qu-bie 区别
 qu-chu 驱除 去除
 qu-dai 取代
@@ -28269,6 +28269,7 @@ z-l-x-z-zh 自律性组织
 z-m 咱们 灾民 赞美 责骂 怎么 姊妹 字码 自满 字母 祖母 罪名 左面 做梦
 z-m-b 怎么办
 z-m-d 自民党
+z-m-q 奏鸣曲
 z-m-q-zh-y 在密切注意
 z-m-sh-x-g-l 字母顺序概率
 z-m-y 怎么样
@@ -30307,7 +30308,7 @@ zong-ze 总则
 zong-zheng-zhi-bu 总政治部
 zong-zhi 宗旨 总之 总值
 zong-zhuang-bei-bu 总装备部
-zou 走 邹 揍 鲰 菆 緅 驺 棸 郰 掫 陬 诹 奏 诌 鄹
+zou 奏 走 邹 揍 鲰 菆 緅 驺 棸 郰 掫 陬 诹 诌 鄹
 zou-chu 走出
 zou-cuo 走错
 zou-dao 走道
@@ -30318,6 +30319,7 @@ zou-jian-zhang 邹剑章
 zou-kai 走开
 zou-lang 走廊
 zou-lou 走漏
+zou-ming-qu 奏鸣曲
 zou-ping 邹平
 zou-si 走私
 zou-wan-lu 走弯路
