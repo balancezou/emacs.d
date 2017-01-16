@@ -1,5 +1,6 @@
-;; load site-lisp default path
-(add-to-list 'load-path "~/.emacs.d/site-lisp")
+;; set default-directory for windows
+(when (string-equal system-type "windows-nt")
+  (setq default-directory "~/"))
 
 ;; encoding
 ;; disable CJK coding/encoding (Chinese/Japanese/Korean characters)
@@ -11,6 +12,9 @@
 (unless (eq system-type 'windows-nt)
   (set-selection-coding-system 'utf-8))
 (prefer-coding-system 'utf-8)
+
+;; dont display startup face
+(setq inhibit-startup-message t)
 
 ;; englisg font
 (set-frame-font "monospace 10")
@@ -35,11 +39,6 @@
 
 ;; display image
 (auto-image-file-mode t) 
-
-;; automatic load abbreviations tables
-(setq-default abbrev-mode t)
-(read-abbrev-file "~/.abbrev_defs")
-(setq save-abbrevs t)
 
 ;; In every buffer, the line which contains the cursor 
 ;; will be fully highlighted
@@ -97,5 +96,11 @@
                  (calendar-iso-from-absolute
                   (calendar-absolute-from-gregorian (list month day year)))))
         'font-lock-face 'calendar-iso-week-face))
+
+;; automatic load abbreviations tables
+(setq-default abbrev-mode t)
+(if (file-exists-p abbrev-file-name)
+    (quietly-read-abbrev-file))
+(setq save-abbrevs t)
 
 (provide 'init-local)
