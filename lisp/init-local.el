@@ -31,8 +31,8 @@
 (tool-bar-mode -1)
 
 ;; set date\time display
-(setq display-time-day-and-date t)
-(display-time)
+;(setq display-time-day-and-date t)
+;(display-time)
 
 ;; you know
 (fset 'yes-or-no-p 'y-or-n-p)

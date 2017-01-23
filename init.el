@@ -80,5 +80,11 @@
 (add-to-list 'auto-mode-alist '("\\.vsh\\'" . glsl-mode))
 (add-to-list 'auto-mode-alist '("\\.fsh\\'" . glsl-mode))
 
+;; cmake mode
+(require 'cmake-mode)  
+(setq auto-mode-alist  
+      (append '(("CMakeLists\\.txt\\'" . cmake-mode)  
+                ("\\.cmake\\'" . cmake-mode))  
+              auto-mode-alist))  
 
 (provide 'init)
