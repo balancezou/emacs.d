@@ -103,4 +103,14 @@
     (quietly-read-abbrev-file))
 (setq save-abbrevs t)
 
+;; eww setting
+(with-eval-after-load 'eww
+  (custom-set-variables
+   '(eww-search-prefix "http://cn.bing.com/search?q="))
+
+  (define-key eww-mode-map (kbd "e") 'eww-browse-with-external-browser)
+  (define-key eww-mode-map (kbd "i") 'eww)
+  )
+
+
 (provide 'init-local)
