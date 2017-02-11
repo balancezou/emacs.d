@@ -17,7 +17,12 @@
 (setq inhibit-startup-message t)
 
 ;; englisg font
+;; set font to monospace when linux,
+;; and courier-new when windows
 (set-frame-font "monospace 10")
+(when (string-equal system-type "windows-nt")
+  (set-default-font "Courier New-10")
+)
 
 ;; full screen
 (toggle-frame-fullscreen)
