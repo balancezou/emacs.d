@@ -88,3 +88,9 @@
               auto-mode-alist))  
 
 (provide 'init)
+
+
+;; helm
+(add-to-list 'load-path "~/.emacs.d/site-lisp/helm")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/async")
+(require 'helm-config)
