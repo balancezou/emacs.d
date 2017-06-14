@@ -94,6 +94,9 @@
 (require 'helm-config)
 
 ;; expand region
+(add-to-list 'load-path "~/.emacs.d/site-lisp/expand-region")
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
 
 
 (provide 'init)
