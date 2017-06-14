@@ -28,6 +28,7 @@
 
 ;; gtags
 ;;start Emacs and execute gtags-mode function.
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/global")
 (autoload 'gtags-mode "gtags" "" t)
 (add-hook 'c-mode-common-hook
 	  (lambda ()
@@ -87,10 +88,13 @@
                 ("\\.cmake\\'" . cmake-mode))  
               auto-mode-alist))  
 
-(provide 'init)
-
-
 ;; helm
 (add-to-list 'load-path "~/.emacs.d/site-lisp/helm")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/async")
 (require 'helm-config)
+
+;; expand region
+
+
+(provide 'init)
+

@@ -117,5 +117,24 @@
   (define-key eww-mode-map (kbd "i") 'eww)
   )
 
+;; newsticker
+(setq newsticker-retrieval-interval 0)  ; 不在后台自动更新
+
+(setq newsticker-url-list-defaults nil
+      newsticker-url-list '(("emacs-china" "https://emacs-china.org/latest.rss")
+                            ("知乎每日精选"  "https://www.zhihu.com/rss")
+                            ("小众软件"     "http://feeds.appinn.com/appinns/")
+                            ("solidot"    "http://www.solidot.org/index.rss")
+                            ("什么值得买"   "http://feed.smzdm.com/")
+                            ("mjoke"      "http://www.newsmth.net/rss.php?mJoke")
+                            ("利器"        "http://liqi.io/feed/")
+                            ("泛科学"      "http://pansci.asia/feed")
+                            ))
+(defun my/newsticker-show-news ()
+  (interactive)
+  (require 'newsticker)
+  (cl-letf (((symbol-function 'newsticker-start) #'ignore))
+    (newsticker-show-news)))
+
 
 (provide 'init-local)
