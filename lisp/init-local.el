@@ -1,7 +1,3 @@
-;; set default-directory for windows
-(when (string-equal system-type "windows-nt")
-  (setq default-directory "~/"))
-
 ;; encoding
 ;; disable CJK coding/encoding (Chinese/Japanese/Korean characters)
 (setq utf-translate-cjk-mode nil) 
@@ -13,37 +9,23 @@
   (set-selection-coding-system 'utf-8))
 (prefer-coding-system 'utf-8)
 
-;; dont display startup face
+;; don't display startup face
 (setq inhibit-startup-message t)
-
-;; englisg font
-;; set font to monospace when linux,
-;; and courier-new when windows
-(set-frame-font "monospace 10")
-(when (string-equal system-type "windows-nt")
-  (set-default-font "Courier New-10")
-)
-
-;; full screen
-(toggle-frame-fullscreen)
 
 ;; display line number & column number
 (setq column-number-mode t)
 (setq line-number-mode t)
+(global-display-line-numbers-mode t)
 
 ;; kick off menubar & toolbar
 (menu-bar-mode -1)
-(tool-bar-mode -1)
+;;(tool-bar-mode -1)
 
 ;; set date\time display
-;(setq display-time-day-and-date t)
-;(display-time)
+(display-time)
 
-;; you know
+;; use y/n instead of yes/no
 (fset 'yes-or-no-p 'y-or-n-p)
-
-;; display image
-(auto-image-file-mode t) 
 
 ;; In every buffer, the line which contains the cursor 
 ;; will be fully highlighted
@@ -52,55 +34,17 @@
 ;; use clipboard
 (setq x-select-enable-clipboard t)
 
-;; use clipboard
-(setq x-select-enable-clipboard t)
-
-(setq visible-bell t)
-(setq  scroll-margin 2
-       scroll-conservatively 10000)
-(setq kill-ring-max 200)
-(setq transient-mark-mode t)
-
 ;; matching pairs of parentheses
 (show-paren-mode 1)
 
 ;; all backups goto ~/.backups instead in the current directory
 (setq backup-directory-alist (quote (("." . "~/.backups"))))
 
-;; Meta-g: goto line
-(global-set-key (kbd "M-g") 'goto-line)
-
-;; open recent file
-(require 'recentf)
-(recentf-mode 1)
-(setq recentf-max-menu-items 100)
-(global-set-key (kbd "C-c C-f") 'recentf-open-files)
-
-;; tramp
+;; enable tramp
 (require 'tramp)
-
-;; indent
-(setq-default indent-tabs-mode nil)
-(setq default-tab-width 4)
-(setq-default c-basic-offset 4)
-(setq c-default-style "linux"
-      c-basic-offset 4)
-(c-set-offset 'substatement-open 0)
 
 ;; display function name
 (which-function-mode t)
-
-;; display weekly calender
-(copy-face font-lock-constant-face 'calendar-iso-week-face)
-(set-face-attribute 'calendar-iso-week-face nil
-                      :height 0.5 :foreground "salmon")
-(setq calendar-intermonth-text
-      '(propertize
-        (format "W%02d"
-                (car
-                 (calendar-iso-from-absolute
-                  (calendar-absolute-from-gregorian (list month day year)))))
-        'font-lock-face 'calendar-iso-week-face))
 
 ;; automatic load abbreviations tables
 (setq-default abbrev-mode t)
@@ -108,33 +52,28 @@
     (quietly-read-abbrev-file))
 (setq save-abbrevs t)
 
-;; eww setting
-(with-eval-after-load 'eww
-  (custom-set-variables
-   '(eww-search-prefix "http://cn.bing.com/search?q="))
+;; auto-load changed files
+(global-auto-revert-mode 1)
 
-  (define-key eww-mode-map (kbd "e") 'eww-browse-with-external-browser)
-  (define-key eww-mode-map (kbd "i") 'eww)
-  )
+;;-----------------------------------
+;; config global key bindings here
+;;-----------------------------------
+;; Meta-g: goto line
+(global-set-key (kbd "C-c g") 'goto-line)
 
-;; newsticker
-(setq newsticker-retrieval-interval 0)  ; 不在后台自动更新
+;; open recent files
+(require 'recentf)
+(recentf-mode 1)
+(setq recentf-max-menu-items 100)
+(global-set-key (kbd "C-c f") 'recentf-open-files)
 
-(setq newsticker-url-list-defaults nil
-      newsticker-url-list '(("emacs-china" "https://emacs-china.org/latest.rss")
-                            ("知乎每日精选"  "https://www.zhihu.com/rss")
-                            ("小众软件"     "http://feeds.appinn.com/appinns/")
-                            ("solidot"    "http://www.solidot.org/index.rss")
-                            ("什么值得买"   "http://feed.smzdm.com/")
-                            ("mjoke"      "http://www.newsmth.net/rss.php?mJoke")
-                            ("利器"        "http://liqi.io/feed/")
-                            ("泛科学"      "http://pansci.asia/feed")
-                            ))
-(defun my/newsticker-show-news ()
+;; open init file
+(defun open-init-file()
   (interactive)
-  (require 'newsticker)
-  (cl-letf (((symbol-function 'newsticker-start) #'ignore))
-    (newsticker-show-news)))
+  (find-file "~/.emacs.d/init.el"))
+(global-set-key (kbd "C-c i") 'open-init-file)
 
+;; backward delete word
+(global-set-key (kbd "M-S-d") 'backward-kill-word)
 
 (provide 'init-local)
