@@ -13,7 +13,7 @@
 ;; init package
 (require 'init-package)
 ;; init code base config as ide
-;(require 'init-ide)
+(require 'init-ide)
 ;; init cpp
 ;(require 'init-cpp)
 ;; init java
