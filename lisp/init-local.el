@@ -1,6 +1,12 @@
+;;; init-local.el --- basic config with build-in package -*- lexical-binding: t -*-
+;;; Commentary:
+
+;; basic config with build-in package
+
+;;; code:
+
 ;; encoding
 ;; disable CJK coding/encoding (Chinese/Japanese/Korean characters)
-(setq utf-translate-cjk-mode nil) 
 (set-language-environment 'utf-8)
 (setq locale-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -15,7 +21,7 @@
 ;; display line number & column number
 (setq column-number-mode t)
 (setq line-number-mode t)
-(global-display-line-numbers-mode t)
+;(global-display-line-numbers-mode t)
 
 ;; kick off menubar & toolbar
 (menu-bar-mode -1)
@@ -27,12 +33,12 @@
 ;; use y/n instead of yes/no
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; In every buffer, the line which contains the cursor 
+;; In every buffer, the line which contains the cursor
 ;; will be fully highlighted
 (global-hl-line-mode 1)
 
 ;; use clipboard
-(setq x-select-enable-clipboard t)
+(setq select-enable-clipboard t)
 
 ;; matching pairs of parentheses
 (show-paren-mode 1)
@@ -69,11 +75,20 @@
 
 ;; open init file
 (defun open-init-file()
+  "Open init file in .emacs.d ."
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 (global-set-key (kbd "C-c i") 'open-init-file)
+
+;; open work list
+(defun open-worklist-file()
+  "Open work list org file."
+  (interactive)
+  (find-file "~/myfiles/worklist.org"))
+(global-set-key (kbd "C-c w") 'open-worklist-file)
 
 ;; backward delete word
 (global-set-key (kbd "M-S-d") 'backward-kill-word)
 
 (provide 'init-local)
+;;; init-local.el ends here
