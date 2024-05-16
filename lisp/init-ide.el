@@ -56,5 +56,9 @@
 (setq gdb-show-main t)
 
 
+;; project
+(use-package project
+  :bind-keymap ("C-c p" . project-prefix-map))
+
 (provide 'init-ide)
 ;;; init-ide.el ends here
