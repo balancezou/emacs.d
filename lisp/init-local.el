@@ -5,6 +5,7 @@
 
 ;;; code:
 
+
 ;; encoding
 ;; disable CJK coding/encoding (Chinese/Japanese/Korean characters)
 (set-language-environment 'utf-8)
@@ -49,9 +50,6 @@
 ;; enable tramp
 (require 'tramp)
 
-;; display function name
-(which-function-mode t)
-
 ;; automatic load abbreviations tables
 (setq-default abbrev-mode t)
 (if (file-exists-p abbrev-file-name)
@@ -60,6 +58,21 @@
 
 ;; auto-load changed files
 (global-auto-revert-mode 1)
+
+;; auto save desktop
+;; desktop will restore after restart emacs
+(desktop-save-mode 1)
+
+;; macosx -- meta config
+(defconst *is-a-mac* (eq system-type 'darwin))
+(when *is-a-mac*
+    (setq mac-command-modifier 'meta)
+    (setq mac-option-modifier 'none))
+
+
+;; theme
+(load-theme 'leuven-dark t)
+
 
 ;;-----------------------------------
 ;; config global key bindings here
@@ -77,7 +90,7 @@
 (defun open-init-file()
   "Open init file in .emacs.d ."
   (interactive)
-  (find-file "~/.emacs.d/init.el"))
+  (find-file (expand-file-name "init.el" user-emacs-directory)))
 (global-set-key (kbd "C-c i") 'open-init-file)
 
 ;; open work list
@@ -87,8 +100,6 @@
   (find-file "~/myfiles/worklist.org"))
 (global-set-key (kbd "C-c w") 'open-worklist-file)
 
-;; backward delete word
-(global-set-key (kbd "M-S-d") 'backward-kill-word)
 
 (provide 'init-local)
 ;;; init-local.el ends here

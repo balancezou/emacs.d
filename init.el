@@ -20,20 +20,19 @@
 
 ;; Measure startup time
 (require 'init-benchmarking)
-;; init common config
 (require 'init-local)
-;; init package
 (require 'init-package)
-;; init code basic config as ide
+(require 'init-org)
 (require 'init-ide)
-;; init cpp
 (require 'init-cpp)
-;; init java
-;(require 'init-java)
+(require 'init-python)
+(require 'init-java)
+
+
+(setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
+(condition-case nil
+    (load custom-file)
+  (error nil))
 
 (provide 'init)
-;; Local Variables:
-;; coding: utf-8
-;; no-byte-compile: t
-;; End:
 ;;; init.el ends here
