@@ -24,9 +24,10 @@
 (setq line-number-mode t)
 ;(global-display-line-numbers-mode t)
 
-;; kick off menubar & toolbar
+;; kick off menubar & toolbar & scroll bar
 (menu-bar-mode -1)
 ;;(tool-bar-mode -1)
+;;(scroll-bar-mode -1)
 
 ;; set date\time display
 (display-time)
@@ -71,7 +72,7 @@
 
 
 ;; theme
-(load-theme 'leuven-dark t)
+(load-theme 'manoj-dark t)
 
 
 ;;-----------------------------------

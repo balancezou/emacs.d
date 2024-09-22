@@ -60,9 +60,11 @@
 (use-package treesit-auto
   :ensure t
   :demand t
+  :custom
+  (treesit-auto-install 'prompt)
   :config
-  (setq treesit-auto-install 'prompt)
-  (setq global-treesit-auto-mode t))
+  (treesit-auto-add-to-auto-mode-alist 'all)
+  (global-treesit-auto-mode))
 (setq treesit-font-lock-level 4)
 
 
