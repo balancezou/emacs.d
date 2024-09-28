@@ -13,10 +13,21 @@
 
 ;; indent
 (setq indent-tabs-mode nil)
-;; indent
 (require 'cc-vars)
 (setq c-default-style "linux"
       c-basic-offset 4)
+
+;; hs-minor-mode
+(defun my-hs-toggle-fold ()
+  "My hs toggle."
+  (interactive "p")
+  (save-excursion
+    (end-of-line)
+    (hs-toggle-hiding)))
+(add-hook 'hs-minor-mode-hook
+          (lambda()
+            (local-set-key (kbd "C-,") 'my-hs-toggle-fold)))
+
 
 (require 'ansi-color)
 (defun display-ansi-colors ()

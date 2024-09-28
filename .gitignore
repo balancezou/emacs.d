@@ -19,6 +19,7 @@
 /org-persist
 /speed-type
 /share
+/eglot-java-eclipse-jdt-cache
 .youdao
 .emacs.desktop*
 .org-id-locations

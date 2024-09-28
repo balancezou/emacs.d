@@ -27,7 +27,7 @@
 ;; kick off menubar & toolbar & scroll bar
 (menu-bar-mode -1)
 ;;(tool-bar-mode -1)
-;;(scroll-bar-mode -1)
+(scroll-bar-mode -1)
 
 ;; set date\time display
 (display-time)
@@ -72,7 +72,7 @@
 
 
 ;; theme
-(load-theme 'manoj-dark t)
+(load-theme 'leuven-dark t)
 
 
 ;;-----------------------------------

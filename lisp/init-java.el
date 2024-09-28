@@ -18,27 +18,18 @@
 ;; (add-hook 'java-ts-mode-hook #'eglot-ensure)
 
 (use-package eglot-java
-  :ensure t
-  :config
-  (setq tab-width 4)
-  (setq indent-tabs-mode nil))
+  :ensure t)
 (add-hook 'java-mode-hook 'eglot-java-mode)
 (add-hook 'java-ts-mode-hook 'eglot-java-mode)
 
-(setq eglot-java-user-init-opts-fn 'custom-eglot-java-init-opts)
-(defun custom-eglot-java-init-opts (server eglot-java-eclipse-jdt)
-  "Custom options that will be merged with any default settings."
-  '(:settings
-    (:java
-     (:format
-      (:settings
-       (:url "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml")
-       :enabled t)))))
 
 (use-package java-ts-mode
   :hook ((java-ts-mode . eglot-ensure)
 	     (java-ts-mode . company-mode))
   :mode ("\\.java\\'" . java-ts-mode)
+  :config
+  (setq tab-width 4)
+  (setq indent-tabs-mode nil)
 )
 
 
